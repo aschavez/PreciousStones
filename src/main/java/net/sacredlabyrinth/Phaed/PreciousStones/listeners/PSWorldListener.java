@@ -69,7 +69,7 @@ public class PSWorldListener implements Listener {
      */
     @EventHandler(priority = EventPriority.HIGH)
     public void onPortalCreate(PortalCreateEvent event) {
-        ArrayList<Block> blocks = event.getBlocks();
+        ArrayList<BlockState> blocks = event.getBlocks();
 
         if (event.getReason().equals(PortalCreateEvent.CreateReason.FIRE)) {
             Field field = plugin.getForceFieldManager().getEnabledSourceField(blocks.get(0).getLocation(), FieldFlag.PREVENT_PORTAL_CREATION);
